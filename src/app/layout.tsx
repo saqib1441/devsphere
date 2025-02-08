@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins, Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ThemeProvider from "@/components/ThemeProvider";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -31,7 +34,11 @@ export default function RootLayout({
       <body
         className={`${nunitoSans.variable} ${poppins.className} antialiased`}
       >
-        {children}
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

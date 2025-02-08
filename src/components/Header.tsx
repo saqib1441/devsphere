@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import HeroImg from "@/assets/hero.svg";
+import HeroImg from "@/assets/hero.png";
 
 const Header: FC = () => {
   return (
@@ -12,11 +12,11 @@ const Header: FC = () => {
           <p className="bg-gradient-to-r from-primary to-yellow-500 w-fit py-1 px-5 text-sm rounded-full text-white mb-4">
             Premium Services
           </p>
-          <h1 className="font-nunito text-3xl leading-9 font-black text-black/80 mb-4 sm:w-[500px] sm:mx-auto sm:text-4xl lg:w-auto xl:w-[500px] lg:mx-0 xl:text-5xl xl:leading-[1.13]">
-            Launch Faster with <span className="text-primary">Dev</span> Sphere
+          <h1 className="font-nunito text-3xl leading-9 font-black text-black/80 mb-4 sm:w-[500px] sm:mx-auto sm:text-4xl lg:w-auto xl:w-[500px] lg:mx-0 xl:text-5xl xl:leading-[1.13] dark:text-white/90">
+            Launch Faster with <span className="text-primary">Dev</span>Sphere
             as Your Co-Pilot
           </h1>
-          <p className="text-black/70 mb-6 sm:w-[500px] sm:mx-auto lg:w-auto xl:w-[500px] lg:mx-0">
+          <p className="text-black/70 mb-6 sm:w-[500px] sm:mx-auto lg:w-auto xl:w-[500px] lg:mx-0 dark:text-white/70">
             Transform your business with expert web/app development, UI/UX
             design & branding. Secure, scalable IT services driving innovation
             that lasts

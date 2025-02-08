@@ -1,6 +1,4 @@
-import Image from "next/image";
 import { FC } from "react";
-import Logo from "@/assets/logo-light.svg";
 import {
   Sheet,
   SheetClose,
@@ -11,18 +9,14 @@ import {
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { FaBarsStaggered } from "react-icons/fa6";
+import Logo from "./Logo";
+import ThemeButton from "./ThemeButton";
 
 const Navbar: FC = () => {
   return (
-    <nav className="shadow bg-white/30 backdrop-blur-sm">
+    <nav className="shadow dark:shadow-white/5">
       <div className="wrapper flex items-center py-5 justify-between">
-        <div>
-          <Image
-            src={Logo}
-            alt="dev-sphere-logo"
-            className="w-[150px] lg:w-[200px]"
-          />
-        </div>
+        <Logo />
         <div className="lg:flex gap-5 items-center hidden">
           <Link
             href="/"
@@ -31,46 +25,47 @@ const Navbar: FC = () => {
             Home
           </Link>
           <Link
-            href="/"
+            href="/about"
             className="hover:text-primary transition-all duration-300"
           >
             About
           </Link>
           <Link
-            href="/"
+            href="/services"
             className="hover:text-primary transition-all duration-300"
           >
             Services
           </Link>
           <Link
-            href="/"
+            href="/team"
             className="hover:text-primary transition-all duration-300"
           >
             Team
           </Link>
           <Link
-            href="/"
+            href="/portfolio"
             className="hover:text-primary transition-all duration-300"
           >
             Portfolio
           </Link>
           <Link
-            href="/"
+            href="/testimonials"
             className="hover:text-primary transition-all duration-300"
           >
             Testimonials
           </Link>
           <Link
-            href="/"
+            href="/contact"
             className="hover:text-primary transition-all duration-300"
           >
             <Button>Contact Us</Button>
           </Link>
+          <ThemeButton />
         </div>
-        <div className="lg:hidden">
+        <div className="lg:hidden flex items-center gap-3">
           <Sheet>
             <SheetTrigger>
-              <FaBarsStaggered className="text-lg" />
+              <FaBarsStaggered className="text-xl" />
             </SheetTrigger>
             <SheetContent className="w-full">
               <SheetTitle></SheetTitle>
@@ -101,6 +96,7 @@ const Navbar: FC = () => {
               </div>
             </SheetContent>
           </Sheet>
+          <ThemeButton />
         </div>
       </div>
     </nav>

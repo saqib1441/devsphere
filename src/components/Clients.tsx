@@ -18,8 +18,8 @@ const images: StaticImageData[] = [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6];
 
 const Clients: FC = () => {
   return (
-    <div className="wrapper shadow-mainShadow py-10 rounded-2xl text-center -mt-28 bg-white">
-      <h1 className="font-nunito text-3xl font-black text-black/90">
+    <div className="wrapper shadow-mainShadow py-10 rounded-2xl text-center -mt-28 bg-white dark:bg-background">
+      <h1 className="font-nunito text-3xl font-black text-black/90 dark:text-white/90">
         Join Our Happy Customers
       </h1>
       <div className="mt-2 px-5">

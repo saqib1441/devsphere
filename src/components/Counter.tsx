@@ -27,7 +27,7 @@ const Counter: FC<ICounterProps> = ({
         suffix={suffix}
         className="text-3xl text-primary font-nunito font-black"
       />
-      <p className="text-black/70 text-sm">{description}</p>
+      <p className="text-black/70 dark:text-white/70 text-sm">{description}</p>
     </div>
   );
 };

@@ -32,7 +32,7 @@
   }
 
   .dark {
-    --background: 20 14.3% 4.1%;
+    --background: 220, 50%, 10%;
     --foreground: 60 9.1% 97.8%;
     --card: 20 14.3% 4.1%;
     --card-foreground: 60 9.1% 97.8%;
@@ -62,5 +62,11 @@
 @layer base {
   .wrapper {
     @apply w-[90%] mx-auto md:w-[85%] xl:w-[80%];
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

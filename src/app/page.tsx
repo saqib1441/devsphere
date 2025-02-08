@@ -1,22 +1,18 @@
 import About from "@/components/About";
 import Clients from "@/components/Clients";
 import CustomeService from "@/components/CustomeService";
-import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Navbar from "@/components/Navbar";
 import Portfolio from "@/components/Portfolio";
 import Quote from "@/components/Quote";
 import Services from "@/components/Services";
 import Testimonial from "@/components/Testimonial";
 import WhyUs from "@/components/WhyUs";
+import { FC } from "react";
 
-const HomePage = () => {
+const HomePage: FC = () => {
   return (
     <>
-      <header className="bg-gradient-to-r from-yellow-5 to-primary/10">
-        <Navbar />
-        <Header />
-      </header>
+      <Header />
       <Clients />
       <About />
       <Services />
@@ -25,7 +21,6 @@ const HomePage = () => {
       <Portfolio />
       <Testimonial />
       <Quote />
-      <Footer />
     </>
   );
 };

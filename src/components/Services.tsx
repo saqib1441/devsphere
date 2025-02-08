@@ -8,7 +8,7 @@ import {
   FaMobile,
   FaPalette,
 } from "react-icons/fa6";
-import { Button } from "./ui/button";
+import ServiceCard from "./ServiceCard";
 
 interface IService {
   icon: ReactElement;
@@ -75,21 +75,13 @@ const Services: FC = () => {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {data.map((service, index) => {
             return (
-              <div
+              <ServiceCard
                 key={index}
-                className="shadow-mainShadow rounded-md py-5 px-5"
-              >
-                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-primary/5 text-3xl text-primary">
-                  {service.icon}
-                </div>
-                <h1 className="text-lg font-black font-nunito text-black/90 my-2">
-                  {service.title}
-                </h1>
-                <p className="text-black/70 mb-3">{service.description}</p>
-                <Link href={service.link}>
-                  <Button>Read More</Button>
-                </Link>
-              </div>
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                link={service.link}
+              />
             );
           })}
         </div>

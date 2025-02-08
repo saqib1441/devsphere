@@ -61,16 +61,20 @@ const TestimonialSwiper: FC = () => {
     >
       {data.map((item, index) => (
         <SwiperSlide key={index} className="pb-10">
-          <div className="p-5 flex flex-col items-center shadow-xl rounded-xl cursor-pointer">
+          <div className="p-5 flex flex-col items-center shadow-xl rounded-xl cursor-pointer dark:shadow-gray-800/40">
             <div className="mb-2 text-3xl text-primary">
               <FaQuoteLeft />
             </div>
-            <p className="text-black/70 text-center">{item.text}</p>
+            <p className="text-black/70 dark:text-white/70 text-center">
+              {item.text}
+            </p>
             <div className="flex items-center mt-3 flex-col">
               <div className="w-16 h-16 flex items-center justify-center rounded-full overflow-hidden text-3xl border border-primary mb-1">
                 <FaUser />
               </div>
-              <h1 className="text-lg font-nunito font-black">{item.name}</h1>
+              <h1 className="text-lg font-nunito font-black dark:text-white/90 text-black/90">
+                {item.name}
+              </h1>
             </div>
           </div>
         </SwiperSlide>
